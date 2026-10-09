@@ -7,6 +7,9 @@ PASOS PARA EJECUCIÓN
     x-client-secret: Demo-Cliente-2026-X7p9
 5. Listo para usarse
 
+
+![Diagrama de Entidad-Relación](docs/diagrama-de-entidad-relacion.png)
+
 Diagrama de Entidad-Relación
 De acuerdo al payload entregado, se procedió a identificar las entidades participantes en el proceso. Con información 
 mínima se pudo identificar la participación de 2 de negocio: Order y Service. De existir mayor granularidad en los datos 
@@ -17,9 +20,9 @@ donde se aplicaron principalmente los conceptos de agregados y eventos de domini
 Adicionalmente se agregaron entidades necesarias para el funcionamiento de api de integración, en este caso
 se colocaron dentro del Service Context.
 
-![Diagrama de Entidad-Relación](docs/diagrama-de-entidad-relacion.png)
 
 ![Diagrama de arquitectura](docs/diagrama-de-arquitectura.png)
+
 
 | Componente | Responsabilidad |
 |---|---|
@@ -33,7 +36,9 @@ se colocaron dentro del Service Context.
 | **Worker** | Consulta el Outbox y procesa los mensajes pendientes. |
 | **MediatR** | Publica notificaciones dentro del proceso para que los handlers las atiendan. |
 
-Flujo de cambio de estado
+
+**Flujo de cambio de estado**
+
 1. El TMS envía el payload al webhook.
 2. Presentation recibe la solicitud y la deriva al caso de uso correspondiente en Application.
 3. Application guarda el mensaje recibido en el Outbox. Tras confirmar el guardado, la API puede responder al TMS sin esperar el procesamiento completo.
@@ -44,7 +49,9 @@ Flujo de cambio de estado
 8. Si el envío falla, el mensaje se conserva para aplicar la política de reintentos; si tiene éxito, se marca como procesado.
 Nota: MediatR publica notificaciones dentro de la aplicación; no es un message broker. El Outbox persiste los mensajes y el worker los procesa de forma asíncrona.
 
-Consideraciones de persistencia
+
+**Consideraciones de persistencia**
+
 El cambio de negocio y su mensaje Outbox deben guardarse en la misma transacción para evitar que uno se persista sin el otro. La implementación actual debe cumplir esa condición antes de describir el guardado como atómico.
 Si el entorno de prueba usa EF Core InMemory, indícalo como una configuración de pruebas. Para producción se necesita una base de datos persistente que permita conservar el Outbox ante reinicios.
 
