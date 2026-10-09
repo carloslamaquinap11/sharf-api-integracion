@@ -55,6 +55,13 @@ se colocaron dentro del Service Context.
 Nota: MediatR publica notificaciones dentro de la aplicación; no es un message broker. El Outbox persiste los mensajes y el worker los procesa de forma asíncrona.
 
 
+
+**Diagrama de Proceso de Integración**
+
+
+![Diagrama de Proceso de Integración](docs/diagrama-de-proceso-de-integracion.png)
+
+
 **Consideraciones de persistencia**
 
 El cambio de negocio y su mensaje Outbox deben guardarse en la misma transacción para evitar que uno se persista sin el otro. La implementación actual debe cumplir esa condición antes de describir el guardado como atómico.
