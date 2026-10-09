@@ -1,0 +1,25 @@
+namespace Domain;
+
+public enum OrderStatusEnum
+{
+    [Id("D47453A4-E59F-4B55-8988-3D2A8D1A0B66")]
+    Planning,
+    [Id("BDF723CC-A10B-46AD-B894-404D4CC30429")]
+    Started,
+    [Id("3F260BD3-1F1A-412E-9C20-35F1C5AD433C")]
+    AtPickupPoint,
+    [Id("016FAB8B-93CD-45BC-AE30-1EBF0526CF1C")]
+    Collected,
+    [Id("322D92D2-83C3-4C54-875A-615222E8877E")]
+    NotCollected,
+    [Id("5CCC6562-4727-40FD-AD57-470B07884647")]
+    Delivered,
+    [Id("EF05602C-BE77-4CF9-A8E5-1ED81A983C61")]
+    NotDelivered,
+    [Id("6EC8F45B-13BA-4F44-A915-5AB9B96F043C")]
+    ToBeReturn,
+    [Id("6CBD507B-7C2E-4D48-AA3C-B4B3F113AC92")]
+    Returned,
+    [Id("3BF76269-1BC7-44A0-AD09-E5E15CE31B83")]
+    NotReturned
+}
