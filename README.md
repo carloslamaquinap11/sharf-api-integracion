@@ -3,9 +3,11 @@ PASOS PARA EJECUCIÓN
 2. Ejecutar dotnet build (asegurarse de tener instalado NET 10)
 3. Acceder al documentador Swagger: http://localhost:5283/swagger
 4. Las credenciales para consumir el api se deben colocar en los headers: 
-    x-client-id: proveedor-prueba
-    x-client-secret: Demo-Cliente-2026-X7p9
-5. Listo para usarse
+
+   **x-client-id**: proveedor-prueba
+   **x-client-secret**: Demo-Cliente-2026-X7p9
+
+6. Listo para usarse
 
 
 ![Diagrama de Entidad-Relación](docs/diagrama-de-entidad-relacion.png)
