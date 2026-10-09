@@ -5,6 +5,7 @@ PASOS PARA EJECUCIÓN
 4. Las credenciales para consumir el api se deben colocar en los headers: 
 
    **x-client-id**: proveedor-prueba
+   
    **x-client-secret**: Demo-Cliente-2026-X7p9
 
 6. Listo para usarse
