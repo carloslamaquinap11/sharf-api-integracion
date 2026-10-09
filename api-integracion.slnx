@@ -1,5 +1,18 @@
 <Solution>
+  <Folder Name="/Application/">
+    <Project Path="Application/Application/Application.csproj" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="Domain/Domain/Domain.csproj" />
+  </Folder>
   <Folder Name="/Host/">
     <Project Path="Host/Host/Host.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Persistence/Persistence.csproj" />
+    <Project Path="Infrastructure/Service/Service.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="Presentation/Rest/Rest.csproj" />
   </Folder>
 </Solution>
