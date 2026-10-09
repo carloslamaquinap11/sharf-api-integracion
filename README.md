@@ -8,7 +8,8 @@ PASOS PARA EJECUCIÓN
    
    **x-client-secret**: Demo-Cliente-2026-X7p9
 
-6. Listo para usarse
+6. Usar el endpoint http://localhost:5283/api/OrderTracking (POST) con la trama proporcionada en la evaluación.
+7. Agregar como requestBody, la trama proporcionada como ejemplo. Modificar los valores del nodo Status para hacer las pruebas.
 
 
 ![Diagrama de Entidad-Relación](docs/diagrama-de-entidad-relacion.png)
