@@ -13,7 +13,8 @@ PASOS PARA EJECUCIÓN
 
 ![Diagrama de Entidad-Relación](docs/diagrama-de-entidad-relacion.png)
 
-Diagrama de Entidad-Relación
+**Diagrama de Entidad-Relación**
+
 De acuerdo al payload entregado, se procedió a identificar las entidades participantes en el proceso. Con información 
 mínima se pudo identificar la participación de 2 de negocio: Order y Service. De existir mayor granularidad en los datos 
 que son necesarios para el proceso, las entidades participantes podrían formar sus propios contextos. Para este caso, por la 
